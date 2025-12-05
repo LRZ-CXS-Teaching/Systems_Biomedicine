@@ -51,7 +51,11 @@ sinfo
 ### 1. Remote Desktop
 For visualization use desktop environment at: https://vm-138-246-237-46.cloud.mwn.de:8443/ 
 
-Click on "Remote Desktop Container". Select 4, 8 or 16 cores and RAM 16GB. Start the desktop. 
+Click on "Remote Desktop Container". Once the Launch settings window is ready, please select the following:
+
+1. Select 4, 8 or 16 cores 
+2. Selecr RAM 16GB or 32 GB. 
+3. Start the desktop. 
 
 ### 2. Jupyterlab
 
@@ -69,6 +73,8 @@ Once the Launch settings window is ready, please select the following:
 
 5. Total Runtime: 4
 
+6. Launch JupyterLab 
+
 ### 3. RStudio 
 
 To use Jupyterlab on Redlion, login to : https://vm-138-246-237-46.cloud.mwn.de:8443/ and click Jupyter Notebook. 
@@ -80,6 +86,8 @@ Once the Launch settings window is ready, please select the following:
 2. RAM: 32GB
 
 3. Total Runtime: 4
+
+4. Launch RStudio 
 
 ## 5. Slurm on Redlion
 ### 5.1. Using Modules 
@@ -177,13 +185,13 @@ Each user has home directory at /home/USERNAME (username choosen by user during 
 There are no limits enforced but this helps in fair-sharing of resources and keeps system stable
 
 ### 6.2 Course data /ceph/systems_biomedicine 
-	Course data is provided here. Only Prof. Julia Frede has access to add or delete data. 
+Course data is provided here. Only Prof. Julia Frede has access to add or delete data. 
 
 ###	6.3. Project (/project) and scratch (/scratch ) directories
-	Please ignore. Not related to this course. 
+Please ignore. Not related to this course. 
 
 ### 6.4 Backup /backup 
-	Please backup only required data here. 
+Please backup only required data here. 
 	``` bash 
 	mkdir username
 	chown username:username username
