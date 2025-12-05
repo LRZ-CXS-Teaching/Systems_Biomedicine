@@ -1,33 +1,33 @@
 # Tips to use Redlion (138.246.237.46)
 ## 1. Registration 
 
-	Register at https://mokey.red-lion.gcs-devcloud.hpc.lrz.de/auth/signup to use the cluster
+Register at https://mokey.red-lion.gcs-devcloud.hpc.lrz.de/auth/signup to use the cluster
 
-	Please wait for admins to approve your registration.
+Please wait for admins to approve your registration.
 
-	For issues, please contact Matteo Foglieni (matteo.foglieni@lrz.de) / Prasanth Ganta (prasanth.ganta@lrz.de)/ Ferdinand Jamitzky (ferdinand.jamitzky@lrz.de).
+For issues, please contact Matteo Foglieni (matteo.foglieni@lrz.de) / Prasanth Ganta (prasanth.ganta@lrz.de)/ Ferdinand Jamitzky (ferdinand.jamitzky@lrz.de).
 
 ## 2. Login to redlion 
 
-      Once registration is successful, one can login to Redlion via below options:
+Once registration is successful, one can login to Redlion via below options:
 
 ### 1. ssh into Redlion 
 
-	``` bash
-	ssh USERNAME@138.246.237.46
-	```
-
-	To check compute and gpu nodes 
-
-	``` bash
-	sinfo 
-	```
+``` bash
+ssh USERNAME@138.246.237.46
+```
+	
+To check compute and gpu nodes 
+	
+``` bash
+sinfo 
+```
 
 ### 2. Desktop and jupyterlab environments on Redlion 
 
-	1. Open https://vm-138-246-237-46.cloud.mwn.de:8443/
-	2. Enter username and password 
-	3. Click on "Remote Desktop Container" or "Jupyter Notebook"
+1. Open https://vm-138-246-237-46.cloud.mwn.de:8443/
+2. Enter username and password 
+3. Click on "Remote Desktop Container" or "Jupyter Notebook"
 
 
 ## 3. Cluster Nodes Specifications
@@ -59,15 +59,15 @@ To use Jupyterlab on Redlion, login to : https://vm-138-246-237-46.cloud.mwn.de:
 
 Once the Launch settings window is ready, please select the following:
 
-Python distribution: miniforge3/25.9.1
+1. Python distribution: miniforge3/25.9.1
 
-Selected custom environment: /custom_software_rocky/miniforge3/envs/systems_biomedicine
+2. Selected custom environment: /custom_software_rocky/miniforge3/envs/systems_biomedicine
 
-Number of Cores: Select 4, 8 or 16 cores 
+3. Number of Cores: Select 4, 8 or 16 cores 
 
-RAM: 32GB
+4. RAM: 32GB
 
-Total Runtime: 4
+5. Total Runtime: 4
 
 ### 3. RStudio 
 
@@ -75,11 +75,11 @@ To use Jupyterlab on Redlion, login to : https://vm-138-246-237-46.cloud.mwn.de:
 
 Once the Launch settings window is ready, please select the following:
 
-Number of Cores: Select 4, 8 or 16 cores 
+1. Number of Cores: Select 4, 8 or 16 cores 
 
-RAM: 32GB
+2. RAM: 32GB
 
-Total Runtime: 4
+3. Total Runtime: 4
 
 ## 5. Slurm on Redlion
 ### 5.1. Using Modules 
@@ -162,26 +162,29 @@ srun software.exe -i inputfile > output.out
 ``` bash
 # on cpus
 srun --partition=node-small --ntasks=1 --cpus-per-task=8 --mem=10G --time=02:00:00 --pty bash
-nvidia-smi
 ```
 
 ``` bash
 # on gpus 
 srun --partition=gpu-node --gres=gpu:1 --ntasks=1  --time=00:30:00 --pty bash
+nvidia-smi
 ```
 
 
 ## 6. Storage and Mounts 
 ### 6.1 Home directory /home/USERNAME
-	Each user has home directory at /home/USERNAME (username choosen by user during registration). PLEASE limit your total data to a maximum of 20 GB. There are no limits enforced but this helps in fair-sharing of resources and keeps system stable
+Each user has home directory at /home/USERNAME (username choosen by user during registration). PLEASE limit your total data to a maximum of 20 GB. 
+There are no limits enforced but this helps in fair-sharing of resources and keeps system stable
+
 ### 6.2 Course data /ceph/systems_biomedicine 
-	Data related to thr course is provided here. Only Prof. Julia Frede has access to add or delete data. 
+	Course data is provided here. Only Prof. Julia Frede has access to add or delete data. 
 
 ###	6.3. Project (/project) and scratch (/scratch ) directories
 	Please ignore. Not related to this course. 
+
 ### 6.4 Backup /backup 
 	Please backup only required data here. 
 	``` bash 
 	mkdir username
 	chown username:username username
-	``` 
+	```
