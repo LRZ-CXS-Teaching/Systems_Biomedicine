@@ -192,7 +192,7 @@ Please ignore. Not related to this course.
 
 ### 6.4 Backup /backup 
 Please backup only required data here. 
-	``` bash 
+``` 
 	mkdir username
 	chown username:username username
-	```
+```
